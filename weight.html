@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>적정 체중 구하기</title>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>적정 체중 구하기</h1>
+    </header>
+
+    <section id="input_data">
+      <form>
+        <label for="user_height">키</label>
+        <input id="user_height" type="text" placeholder="숫자만 입력해주세요">
+        <br>
+        <label for="user_weight">몸무게</label>
+        <input id="user_weight" type="text" placeholder="숫자만 입력해주세요">
+        <br>
+        <input id="calc" type="button" value="계산하기" onclick="best_weight();">
+      </form>
+    </section>
+
+    <hr>
+
+    <section id="output_info">
+      <div id="best_weight">최적의 몸무게</div>
+    </section>
+  </div>
+
+  <!-- 적정 몸무게 계산 프로세스 -->
+  <script>
+    function best_weight(){
+      // 선언부
+      let height;  //키
+      let weight;   //몸무게
+      let best_weight;   //적정몸무게
+      let result;        //판정
+      // 입력부
+      height = document.querySelector('#user_height').value; //키입력
+      weight = document.querySelector('#user_weight').value; //몸무게입력
+      // 처리부    
+      best_weight = (height - 100) * 0.9;
+      result = weight > best_weight ? '이 돼지야' : '갈비씨?';
+      // 출력부
+      document.querySelector('#best_weight').innerText = result;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object의 생성과 변경</title>
+</head>
+<body>
+  <h1>Object(개체)</h1>
+  <h2>Create Object(개체 생성)</h2>
+  <script>
+    let car = {
+      company:'KIA',
+      model:'Carnival',
+      price:'35,000,000',  
+      color:'white',
+      releaseDate:'2021-01-05',
+    }
+    car.allWrite = tmp();
+    function tmp(){
+      for(let carKey in car){
+        document.write(carKey + ' = ' + car[carKey] + '<br>');
+      }
+    }
+    car.allWrite();
+    
+
+    // document.write('제조사 = ' + car.company + '<br>');
+    // document.write('모델명 = ' + car.model + '<br>');
+    // document.write('가격 = ' + car.price + '원<br>');
+    // document.write('색상 = ' + car.color + '<br>');
+    // document.write('출시일 = ' + car.releaseDate + '<br>');
+    
+
+    document.write('==========================================<br>');
+
+    let car2 = new Object();
+    car2.company = 'HYUNDAI';
+    car2.model = 'AVANTE';
+    car2.price = '25,000,000';
+    car2.color = 'black';
+    car2.releaseDate = '2020-05-14';
+    car2.allWrite2 = tmp2();
+    function tmp2(){
+      for(let car2Key in car2){
+        document.write(car2Key + ' = ' + car2[car2Key] + '<br>');
+      }
+    }
+    car2.allWrite2();
+    // document.write('제조사 = ' + car2.company + '<br>');
+    // document.write('모델명 = ' + car2.model + '<br>');
+    // document.write('가격 = ' + car2.price + '원<br>');
+    // document.write('색상 = ' + car2.color + '<br>');
+    // document.write('출시일 = ' + car2.releaseDate + '<br>');
+
+    
+    document.write('==========================================<br>');
+
+    let car3 = new Object({
+      company:'GM',
+      model:'MALIBU',
+      price:'35,000,000',
+      color:'black',
+      releaseDate:'2020-05-14'
+    })
+    car3.allWrite = function(){
+      for(let car3Key in car3){
+        document.write(car3Key + ' = ' + car3[car3Key] + '<br>');
+      }
+    }
+    car3.allWrite();
+    // document.write('제조사 = ' + car3.company + '<br>');
+    // document.write('모델명 = ' + car3.model + '<br>');
+    // document.write('가격 = ' + car3.price + '원<br>');
+    // document.write('색상 = ' + car3.color + '<br>');
+    // document.write('출시일 = ' + car3.releaseDate + '<br>');
+
+
+    document.write('================================<br>');
+    document.write('================================<br>');
+    document.write('================================<br>');
+    
+
+  </script>
+</body>
+</html>

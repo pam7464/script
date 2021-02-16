@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 등록</title>
+</head>
+<body>
+  <h1 ondblclick="alert(1);">이벤트 등록방법</h1>
+  <button type="button" onclick="backRed();">이벤트1(배경빨강)</button>
+  <button type="button" id="btn_green">이벤트2(배경초록)</button>
+  <button type="button" id="btn_blue">이벤트3(배경파랑)</button>
+  <script>
+    function backRed(){
+      document.body.style.backgroundColor='#f00';
+    }
+
+
+    let tmp = document.getElementById('btn_green');
+    tmp.addEventListener('click',function(){
+      document.body.style.backgroundColor='#0f0';
+    })
+
+
+    let tmp2=document.getElementById('btn_blue');
+    tmp2.onclick=function(){
+      document.body.style.backgroundColor='#00f';
+    }
+   
+  </script>
+</body>
+</html>

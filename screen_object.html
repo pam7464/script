@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스크린 개체</title>
+</head>
+<body>
+  <h1>SCREEN OBJECT</h1>
+  <input type="button" value="모니터 가로 크기" onclick="rowWidth();">
+  <input type="button" value="모니터 세로 높이" onclick="colHeight();">
+  <input type="button" value="모니터 바탕화면 가로 크기" onclick="tmp1();">
+  <input type="button" value="모니터 바탕화면 세로 높이" onclick="tmp2();">
+  <script>
+    function rowWidth(){
+      console.log(screen.width);
+    }
+    function colHeight(){
+      console.log(screen.height);
+    }
+    function tmp1(){
+      console.log(screen.availWidth);
+    }
+    function tmp2(){
+      console.log(screen.availHeight);
+    }
+  </script>
+</body>
+</html>

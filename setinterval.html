@@ -1,0 +1,18 @@
+<script>
+  // setInterval(function(),time);
+  // clearInterval(setinterval);
+  
+  let cnt = 0;
+  let myInterver = setInterval(docWrite,1000);
+  
+
+  function docWrite(){
+    if(cnt<10){
+      document.write('안녕하세요<br>');
+      cnt++;
+    }else{
+      clearInterval(myInterver);
+    }
+   
+  }
+</script>

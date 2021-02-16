@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event</title>
+</head>
+<body onresize="bodyResize();">
+  <input type="button" value="click" onclick="myFn();" onmouseover="myFn2();" onmouseout="myFn3();" ondblclick="myFn4();">
+
+  <script>
+    function myFn(){
+      console.log('마우스를 클릭하셨군요');
+    }
+    function myFn2(){
+      console.log('마우스를 올리셨군요');
+    }
+    function myFn3(){
+      console.log('마우스 내렸군');
+    }
+    function myFn4(){
+      console.log('더블클릭');
+    }
+    function bodyResize(){
+      let w = window.outerWidth;
+      let h = window.outerHeight;
+      console.log(`현재창의 너비는 : ${w}이다`);
+    }
+  </script>
+</body>
+</html>

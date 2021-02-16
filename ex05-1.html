@@ -1,0 +1,19 @@
+<script>
+  // 변수의 적용범위
+  var i = 1;//전역변수
+  document.write('함수위에서의 i = ' + i + '<br>');
+  tmp();
+
+  function tmp(){
+    var i = 'cho';//지역변수
+    document.write('함수에서의 i = ' + i + '<br>');
+  }
+
+  document.write('함수아래에서의 i = ' + i + '<br>');
+  
+  tmp2();
+  
+  function tmp2(){
+    document.write('tmp2 함수에서의 i = ' + i + '<br>');
+  }
+</script>

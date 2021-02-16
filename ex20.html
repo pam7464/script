@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날짜/시간 개체</title>
+</head>
+<body>
+
+  <h1>현재 날짜와 시간</h1>
+  <h2>날짜</h2>
+  <span id="year">년</span>
+  <span id="month">월</span>
+  <span id="day">일</span>
+
+  <h2>시간</h2>
+  <span id="hour">시</span>
+  <span id="minu">분</span>
+  <span id="sec">초</span>
+
+  <h2>날짜2</h2>
+  <p id="now_date"></p>
+
+  <h2>시간2</h2>
+  <p id="now_time"></p>
+
+  <h2>날짜3</h2>
+  <p id="to_date"></p>
+
+  <h2>시간3</h2>
+  <p id="to_time"></p>
+  <script>
+    let toDay = new Date();
+
+    document.getElementById('year').innerText = toDay.getFullYear() + '년';
+    document.getElementById('month').innerText = toDay.getMonth() + 1 + '월';
+    document.getElementById('day').innerText = toDay.getDate() + '일';
+
+    document.getElementById('hour').innerText = toDay.getHours() + ':';
+    document.getElementById('minu').innerText = toDay.getMinutes() + ':';
+    document.getElementById('sec').innerText = toDay.getSeconds();
+
+    document.getElementById('now_date').innerText = 
+    toDay.getFullYear() + '년 ' + 
+    toDay.getMonth() + 1 + '월 ' + 
+    toDay.getDate() + '일 '
+    ;
+
+    document.getElementById('now_time').innerText = 
+    toDay.getHours() + ':' + 
+    toDay.getMinutes() + ':' + 
+    toDay.getSeconds()
+    ;
+
+    toDay.setFullYear(2020);
+    toDay.setHours(12);
+
+
+    let yyyy = toDay.getFullYear();
+    let mm = toDay.getMonth() + 1;
+    let dd = toDay.getDate();
+    let hh = toDay.getHours();
+    let m = toDay.getMinutes();
+    let ss = toDay.getSeconds();
+
+    document.getElementById('to_date').innerText = yyyy+'년'+mm+'월'+dd+'일';
+    document.getElementById('to_time').innerText = hh+'시'+m+'분'+ss+'초';
+    
+    // let toDay = new Date();
+    // console.log(toDay);
+    // let birthDay = new Date(1973,3,1);
+    // console.log(birthDay);
+    // let f = (toDay - birthDay) / 1000 / 60 / 60 / 24 / 365;
+    // console.log(f);
+
+    // console.log(toDay.getFullYear());
+    // console.log(toDay.getMonth());
+    // console.log(toDay.getDate());
+    // console.log(toDay.getHours());
+    // console.log(toDay.getMinutes());
+    // console.log(toDay.getSeconds());
+
+
+  </script>
+</body>
+</html>

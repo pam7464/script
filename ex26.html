@@ -1,0 +1,16 @@
+<script>
+  // let myInterval = setInterval(function(){
+  //   document.write('안녕하세요');
+  //   clearInterval(myInterval);
+  // },3000)
+  // setTimeout(function(){
+  //   document.write('안녕하세요');
+  // },3000)
+
+  let newWindow = open('','newWindow','width=100,height=100');
+  newWindow.moveTo(100,100);
+  setTimeout(function(){
+    newWindow.close();
+  },1000)
+
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수의 파라미터(인수)</title>
+</head>
+<body>
+  <h1 id="tmp"></h1>
+
+  <input type="text" id="num03">
+  <span> + </span>
+  <input type="text" id="num04">
+  <span> = </span>
+  <input type="text" id="result">
+  <br>
+  <br>
+  <button type="button" onclick="fnSum();">계산하기</button>
+  <script>
+ 
+
+  // {
+  //   function myFn01(num01,num02,result){
+  //     result = num01 + num02;
+  //     console.log(num01 + '+' + num02 + '=' + result);
+  //   }
+  //   myFn01(10,20);
+  // }
+
+  // {
+  //   let target = document.getElementById('tmp');
+    
+  //   function myFn02(x, y){
+  //     z = Number(x) + Number(y);//자료처리/정보처리      
+  //     return z;      
+  //   }
+    
+  //   target.innerText = myFn02(prompt('num01'),prompt('num02'));// 자료입력/출력
+    
+  // }
+ 
+  {
+    let data01 = document.getElementById('num03');
+    let data02 = document.getElementById('num04');
+    let info = document.getElementById('result');
+
+    function fnAdd(x, y){
+      return Number(x) + Number(y);
+    }
+
+    function fnSum(){
+      info.value = fnAdd(data01.value,data02.value);
+    }
+  }
+  </script>
+</body>
+</html>

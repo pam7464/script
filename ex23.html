@@ -1,0 +1,61 @@
+<script>
+  let array01 = ['hong','lee','sung','gang'];
+  let array02 = [18,18,16,56];
+  let array03 = ['seoul','namwon','namwon','gueju'];
+
+  for(let indexNum in array01){
+    console.log(array01[indexNum]);
+  }
+
+  console.log(array01.join());
+  
+  for(let indexNum in array02){
+    console.log(array02[indexNum]);
+  }
+
+  console.log(array02.sort());
+  console.log(array02[0]);
+  console.log(array02[array02.length-1]);
+
+  console.log(array02.reverse());
+  console.log(array02[0]);
+  console.log(array02[array02.length-1]);
+
+  let array03Sub = array03.slice(0,4);
+  console.log(array03);
+  console.log(array03Sub);
+
+  array03.splice(2,2,'busan','buchun');
+  console.log(array03);
+  array03.splice(2,0,'namwon','gueju');
+  console.log(array03);
+
+  console.log(array01);
+  array01.push('jo');
+  console.log(array01);
+  array01.pop();
+  console.log(array01);
+
+  console.log(array02);
+  array02.unshift(25);
+  console.log(array02);
+  array02.shift();
+  console.log(array02);
+
+  console.log(array01.length + array02.length + array03.length);
+
+  let array = array01.concat(array02);
+  console.log(array);
+  array = array.concat(array03);
+  console.log(array);
+
+  let alpha = ['a','b','c','a','b'];
+  console.log(alpha);
+  console.log(alpha.indexOf('a'));
+  console.log(alpha.indexOf('b'));
+  console.log(alpha.indexOf('c'));
+  console.log(alpha.lastIndexOf('a'));
+  console.log(alpha.lastIndexOf('b'));
+  console.log(alpha.lastIndexOf('c'));
+
+</script>

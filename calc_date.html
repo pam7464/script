@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날짜 계산기</title>
+</head>
+<body>
+  <h1>날짜 계산기</h1>
+  <h2 id="diff_date">남은날짜</h2>
+  <button type="button" onclick="calcDate();">날짜 계산하기</button>
+  <script>
+    function calcDate(){
+      let toDay = new Date();
+      // console.log(toDay);
+      let lastDay = new Date(toDay.getFullYear(),11,31);
+      // console.log(lastDay);
+      let diffDay = Math.round((lastDay - toDay) / (1000 * 60 * 60 * 24));
+      diffDay = Math.ceil((lastDay - toDay) / (1000 * 60 * 60 * 24));
+      // console.log(diffDay);
+
+      document.getElementById('diff_date').innerText = 
+      '올해 남은 기간은 ' + diffDay + '일 입니다.' ;
+    }
+  </script>
+</body>
+</html>

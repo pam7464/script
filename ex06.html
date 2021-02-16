@@ -1,0 +1,39 @@
+<script>
+  //산술연산자(+,-,*,/,%), 문자연산자(+)
+  let num1 = 15;
+  let num2 = 2;
+  let str1 = '2';
+  let result;
+
+  result = num1 + num2;
+  document.write('result = ' + result + '<br>');
+  result = num1 - num2;
+  document.write('result = ' + result + '<br>');
+  result = num1 * num2;
+  document.write('result = ' + result + '<br>');
+  result = num1 / num2;
+  document.write('result = ' + result + '<br>');
+  result = num1 % num2;
+  document.write('result = ' + result + '<br><br><br><br>');
+
+  //대입연산자(=,+=,-=,*=,/=,%=)
+  let num3 = 15;
+  document.write('num3 = ' + num3 + '<br>');
+  //num3 = num3 + result;
+  num3 += result;
+  document.write('num3 = ' + num3 + '<br>');
+  //num3 = num3 - num1;
+  num3 -= num1;
+  document.write('num3 = ' + num3 + '<br><br><br><br>');
+
+  //1증감연산자(++,--)
+  let num4 = 10
+  document.write('num4 = ' + ++num4 + '<br>');//증감우선   11
+  document.write('num4 = ' + num4++ + '<br>');//증감후순위 11
+                                              //          12
+
+  document.write('num4 = ' + num4-- + '<br>');// 12
+                                              // 11      
+  document.write('num4 = ' + --num4 + '<br><br><br><br>');// 10
+  
+</script>

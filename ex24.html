@@ -1,0 +1,37 @@
+<script>
+  let t = new String('HTML CSS javaScript');
+
+
+  console.log(t);
+  console.log('t개체에서 인덱스번호 3번의 문자는 = ' + t.charAt(3));
+  console.log('t개체에서 a의 위치는 = ' + t.indexOf('a'));
+  console.log('t개체에서 a의 마지막 위치는 = ' + t.lastIndexOf('a'));
+  console.log('t개체에서 S의 존재유무 = ' + t.match('S'));
+  for(let cnt in t){
+    t = t.replace('S','s');
+  }
+  console.log(t);
+  console.log('t개체에서 Css의 위치 = ' + t.search('Css'));
+
+  console.log('t개체에서 Css만 추출 = ' + t.slice(5,8));
+  console.log('t개체에서 Css만 추출 = ' + t.substring(5,8));
+  console.log('t개체에서 javascript만 추출 = ' + t.substr(9,10));
+
+  console.log('t개체의 문자를 모두 대문자로 변환 = ' + t.toUpperCase());
+  console.log('t개체의 문자를 모두 소문자로 변환 = ' + t.toLowerCase());
+  
+  
+  console.log('t개체에 Web 문자 추가 = ' + t.concat(' web'));
+  
+  let aIndex = t.indexOf('a');
+  
+  console.log(t);
+  for(let cnt in t){
+    console.log('t개체의 ASCII값 = ' + t.charCodeAt(cnt));
+  }
+  console.log('ASCII 64번 출력 = ' + String.fromCharCode(64));
+  console.log('ASCII 65번 출력 = ' + String.fromCharCode(65));
+
+  console.log('ASCII 97번 출력 = ' + String.fromCharCode(97));
+
+</script>

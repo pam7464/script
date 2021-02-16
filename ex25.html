@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button type="button" onclick="newWindow();">열기</button>
+  <button type="button" onclick="closeWindow();">닫기</button>
+  <button type="button" onclick="moveX100();">가로100px이동</button>
+  <script>
+    let myWindow;
+
+    function newWindow(){
+      myWindow = window.open('','','width=300,height=300');
+    }
+    function closeWindow(){
+      myWindow.close();
+    }
+    function moveX100(){
+      myWindow.moveTo(300, 100);
+    }
+
+    
+  </script>
+</body>
+</html>

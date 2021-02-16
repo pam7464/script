@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    h1{text-align:center;}
+    form{
+      width:640px;margin:0 auto;border:1px solid darkred;padding:14px;
+      display:flex;
+      flex-flow:row wrap;
+      justify-content:space-between;
+      align-content:center;
+    }
+    label,input{width:60%;margin-bottom:28px;padding:14px;}
+    label{width:20%;margin-right:10%;}
+    input[type="button"]{margin:0;width:40%;}
+  </style>
+</head>
+<body>
+  <h1>로그인</h1>
+  <form>
+    <label for="Email">아이디</label>
+    <input type="text" id="Email" placeholder="아이디 또는 이메일">
+    
+    <label for="password">비밀번호</label>
+    <input type="password" id="password" placeholder="비밀번호">
+    
+    <input type="button" value="로그인" onclick="logIn();">
+    <input type="button" value="취소" onclick="cancel();">
+  </form>
+  <script>
+    let eMail = document.getElementById('Email');
+    let passWord = document.getElementById('password');
+
+    function cancel(){
+      eMail.value = '';
+      passWord.value = '';
+    }
+
+    function logIn(){
+      let email =new String(eMail.value);
+      let emailArray = ['.com','.kr','.net'];
+            
+      let chk1 = false;
+      let chk2 = false;
+      let chk3 = false;
+
+      if(email != ''){
+        chk1 = true;
+      }
+
+      for(let cnt=0;cnt<emailArray.length;cnt++){
+        if(email.indexOf(emailArray[cnt])>0){
+          chk2=true;
+        }
+      }
+
+      if(email.indexOf('@')>0){
+        chk3=true;
+      }
+      
+
+      if(chk1 && chk2 && chk3){
+        alert(email + '님 환영합니다.')
+      }else{
+        alert('아이디는 이메일 형식이여야 합니다.')
+      }   
+    }
+  </script>
+</body>
+</html>

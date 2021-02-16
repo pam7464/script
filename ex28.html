@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기명함수 익명함수</title>
+</head>
+<body>
+  <input type="button" value="click" onclick="outPut();">
+  <h1 id="target"></h1>
+  <script>
+
+    // outPut();
+
+    // function outPut(){
+    //   let h1Tag = document.getElementsByTagName('h1');
+    //   console.log(h1Tag);
+    //   for(let cnt in h1Tag){
+    //     h1Tag[cnt].innerText='안녕하세요';
+    //   }
+    // }
+
+    
+
+    // let  outPut = function(){
+    //   let h1Tag = document.getElementsByTagName('h1');
+    //   console.log(h1Tag);
+    //   for(let cnt in h1Tag){
+    //     h1Tag[cnt].innerText='안녕하세요';
+    //   }
+    // }
+
+    // outPut();
+    
+    // function(){
+    //   let h1Tag = document.getElementsByTagName('h1');
+    //   console.log(h1Tag);
+    //   for(let cnt in h1Tag){
+    //     h1Tag[cnt].innerText='안녕하세요';
+    //   }
+    // }
+
+    // setInterval(tmp,1000);
+
+    // function tmp(){
+    //   console.log(1);
+    // }
+
+    // let objectA = {
+    //   item01:'홍길동',
+    //   item02:18,
+    //   item03:'서울',
+    //   item04:function(){
+    //     console.log(1);
+    //   }
+    // }
+
+    // function tmp(){
+    //   console.log(1);
+    // }
+
+    
+    // console.log(objectA.item01);
+    // console.log(objectA.item02);
+    // console.log(objectA.item03);
+    // objectA.item04();
+
+    let styleChange = {
+      dataOutput:tmp1,
+      //setBackColor('red','green','blue')
+      setBackColor:blue
+    }
+
+    function outPut(){
+      styleChange.dataOutput();
+      styleChange.setBackColor();
+    }
+
+    function tmp1(){
+      document.getElementById('target').innerHTML='안녕하세요';
+    }
+
+    function red(){
+      document.body.style.backgroundColor = '#ff0000';
+    }
+    function green(){
+      document.body.style.backgroundColor = '#00ff00';
+    }
+    function blue(){
+      document.body.style.backgroundColor = '#0000ff';
+    }
+  </script>
+</body>
+</html>

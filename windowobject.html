@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>window Object</title>
+</head>
+<body>
+  <h1>윈도우 오브젝트</h1>
+  
+  <input type="button" value="다음열기" onclick="openWindow();">
+  <script>
+    function openWindow(){
+      window.open('https://www.daum.net','','width=600,height=400');
+    }
+  </script>
+
+  <input type="button" value="다음열기/이동" onclick="openDaum();">  
+  <script>
+    function openDaum(){
+      let daumWindow = window.open('https://www.daum.net','','width=600,height=400');
+      console.log('이동전 X = ' + daumWindow.screenLeft);
+      console.log('이동전 Y = ' + daumWindow.screenTop);
+      daumWindow.moveTo(2660,100);
+      console.log('이동후 X = ' + daumWindow.screenLeft);
+      console.log('이동후 Y = ' + daumWindow.screenTop);
+    }
+  </script>
+
+  <input type="button" value="사이즈조정" onclick="resize();">
+  <script>
+    function resize(){
+      let myWindow = open('','','width=300,height=300');
+      setTimeout(function(){
+        myWindow.resizeTo(500,500);
+        myWindow.focus();
+      },3000);
+    }
+  </script>
+
+  <input type="button" value="오늘날자 표시하기" onclick="nowDate();">
+  <script>
+    function nowDate(){
+      let date = new Date();
+      let toDay = date.toLocaleTimeString();      
+      document.write('<h2>' + toDay + '</h2>');
+      setInterval(function(){
+        let date = new Date();
+        let toDay = date.toLocaleTimeString();      
+        document.write('<h2>' + toDay + '</h2>');
+      },1000);
+    }
+  </script>
+
+  <input type="button" value="윈도우크기" onclick="windowSize();">
+  <script>
+    function windowSize(){
+      let resize = open('','','width=100,height=100');
+      resize.resizeTo(500,500);
+      
+    }
+  </script>
+
+</body>
+</html>

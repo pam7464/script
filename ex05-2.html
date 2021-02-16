@@ -1,0 +1,39 @@
+<script>
+  let i = 1;
+{
+  // let var const
+
+  let i = 1;//전역변수 선언
+  var j = 1;//전역변수 선언
+  const k = 1;//전역상수 선언
+
+  document.write('let변수 i = ' + i + '<br>');
+  document.write('var변수 j = ' + j + '<br>');
+  document.write('const상수 k = ' + k + '<br>');
+
+  i++;//변수 증가
+  j++;//변수 증가
+  //k++;//상수 증가(오류)
+
+  document.write('let변수 i = ' + i + '<br>');
+  document.write('var변수 j = ' + j + '<br>');
+  document.write('const상수 k = ' + k + '<br>');
+
+  function tmp(){
+    let i = 100;//지역변수선언
+    var j = 100;//지역변수선언
+    document.write('let변수 i = ' + i + '<br>');
+    document.write('var변수 j = ' + j + '<br>');
+    document.write('const상수 k = ' + k + '<br>');
+  }
+
+  tmp();
+
+  // let i = 1000;//전역변수 선억(중복선언X)
+  var j = 1000;//전역변수 선언
+
+  document.write('let변수 i = ' + i + '<br>');
+  document.write('var변수 j = ' + j + '<br>');
+  document.write('const상수 k = ' + k + '<br>');
+}
+</script>

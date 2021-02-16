@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>closure</title>
+</head>
+<body>
+  <input type="button" value="output1" onclick="fnTest1();">
+  <input type="button" value="output2" onclick="fnTest2();">
+
+  <script>
+    function fnTest1(){
+      for(let cnt=0;cnt<5;cnt++){
+        console.log(cnt);
+      }
+    }
+
+    function fnTest2(){
+      for(let cnt=0;cnt<5;cnt++){
+        setTimeout(function(){
+          console.log(cnt);
+        },1000*cnt)
+      }
+    }
+  </script>
+</body>
+</html>

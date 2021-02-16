@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p{display:inline-block;border:1px solid black;padding:14px;background-color:#f0f0f0;cursor:pointer;}
+    
+  </style>
+</head>
+<body>
+  <h1>Location Object</h1>
+  <p onclick="goNaver();">naver</p>
+  <p onclick="goGoogle();">google</p>
+  <p onclick="goDaum();">daum</p>
+  <p onclick="reLoad();">새로고침</p>
+  <script>
+    function goNaver(){
+      location.href='https://www.naver.com';
+    }
+    function goGoogle(){
+      location.href='https://www.google.com';
+    }
+    function goDaum(){
+      location.href='https://www.daum.net';
+    }
+    function reLoad(){
+      location.reload();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>익명함수와 화살표함수</title>
+</head>
+<body>
+  <input type="button" value="익명함수" onclick="myInfo.nameAge();">
+  <input type="button" value="화살표함수" onclick="myInfo2.nameAge();">
+  <script>
+    let myInfo = {
+      name:'Hong',
+      age:18,
+      nameAge:function(){
+        console.log('사용자 정보는 : ' + this.name + this.age);
+      }
+    }
+
+    let myInfo2 = {
+      name:'Hong',
+      age:18,
+      nameAge:() => {console.log('사용자 정보는 : ' + myInfo2.name + myInfo2.age);}
+    }
+
+
+    // 익명함수
+    let noName = function(){
+      return 10*10;
+    }
+    console.log(noName());
+
+    // 화살표함수
+    let arrow = () => 10*10;
+    console.log(arrow());
+
+    // 익명함수2
+    let noName2 = function(x){
+      return x * x;
+    }
+    console.log(noName2(5));
+
+    // 화살표함수2
+    let arrow2 = (x) => x * x;
+    console.log(arrow2(5));
+
+    // 익명함수3
+    let noName3 = function(x,y){
+      return x * y;
+    }
+    console.log(noName3(10,5));
+
+    // 화살표함수3
+    let arrow3 = (x,y) => x * y;
+    console.log(arrow3(10,5));
+
+    
+    setTimeout(
+    () => console.log(123)
+    ,1000)
+
+    
+
+  </script>
+</body>
+</html>

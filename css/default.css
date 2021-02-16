@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+.wrap{
+  width:960px;
+  margin:0 auto;
+  border:1px solid black;
+  padding:14px;
+}
+.back_for{
+  display:flex;
+  justify-content:space-between;
+}
+input{padding:14px 24px;font-size:larger;font-weight:bolder;}
+h1{text-align:center;}

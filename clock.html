@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시계</title>
+</head>
+<body>
+  <h1>현재 시간</h1>
+  <p id="now_time"></p>
+  <button type="button" onclick="stop();">시계 멈춤</button>
+  <script>
+    let now_time = document.getElementById('now_time');
+    let timing1000 = setInterval(tmp,1000);
+
+    function tmp(){
+      let nowTime = new Date();
+      now_time.innerText = nowTime.toLocaleTimeString();
+    }
+    
+    function stop(){
+      clearInterval(timing1000);
+    }
+  </script>
+</body>
+</html>

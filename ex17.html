@@ -1,0 +1,32 @@
+<script>
+  let tvColor = 'white';
+  let tvPrice = 900000;
+
+  document.write('tv의 색상은 ' + tvColor + '이고<br>');
+  document.write('tv의 가격은 ' + tvPrice + '입니다<br>');
+
+  document.querySelector('body').style.color = 'red';
+
+  let tv2 = {
+    color:'black',
+    price:1000000,
+  }
+
+  document.write('tv2의 색상은' + tv2.color + '입니다.<br>');
+  document.write('tv2의 가격은' + tv2.price + '입니다.<br>');
+
+  let car = {
+    color:'Orange',
+    price:12000000,    
+  }
+  document.write('자동차의 색상은 ' + car.color + '이고 가격은 ' + car.price + '원 입니다.<br>');
+
+  console.log(document.querySelector('body').style.color);
+
+  tv2.color = 'Yellow';
+  document.write('tv2의 업데이트 컬러는 ' + tv2.color + '입니다<br>');
+
+  car.modelName = 'Carnival';
+  document.write('추가된 모델명은 ' + car.modelName + '입니다<br>');
+
+</script>

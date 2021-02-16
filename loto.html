@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로또 번호 선택기</title>
+  <style>
+    h2{border:1px solid black;}
+  </style>
+</head>
+<body>
+  <h1>로또 번호 선택기</h1>
+  <h2 id="loto_number">로또번호</h2>
+  <button type="button" onclick="lotto();">실행하기</button>
+
+  <script>
+    function lotto(){
+      let lotoNum = document.getElementById('loto_number');
+
+      for(let cnt=1; cnt <= 6; cnt++){
+        let num = Math.random();
+        num = Math.round(num * 100);
+        if(num >= 45){
+          num = num % 45 + 1 ;
+        }
+        lotoNum.innerText += num + ',';
+      }
+    }
+  </script>
+</body>
+</html>

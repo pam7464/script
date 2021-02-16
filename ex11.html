@@ -1,0 +1,16 @@
+<script>
+  let memberOut = confirm('탈퇴할래요?');
+  let memberOut2;
+  
+  if(memberOut){
+    memberOut2 = confirm('탈퇴후 3개월간은 재가입이 불가합니다. 탈퇴하시겠습니까? ')
+    if(memberOut2){
+      document.write('탈퇴 되셨습니다.')
+    }else{
+      document.write('아직 회원이십니다.')
+    }    
+  }else{
+    document.write('아직 회원이십니다.')
+  }
+
+</script>

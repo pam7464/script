@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>슬라이드토글</title>
+  <style>
+    #nav_close{display:none;}
+    .nav{height:0;overflow:hidden;transition:0.5s;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>logo</h1>
+    <div class="tgl_btns">
+      <span onclick="
+        let togleButton=document.querySelector('span');
+        let nav=document.querySelector('.nav');
+
+        if(togleButton.innerText=='열기'){
+            nav.style.height='200px';
+            togleButton.innerText='닫기';
+        }else{
+            nav.style.height='0';
+            togleButton.innerText='열기';
+        }
+      ">열기</span>
+      
+    </div>
+    <ul class="nav">
+      <li>첫째</li>
+      <li>둘째</li>
+      <li>셋째</li>
+      <li>넷째</li>
+      <li>다섯째</li>
+    </ul>
+  </header>
+</body>
+</html>
